@@ -30,3 +30,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/env.yml
+
+.DS_Store
+.DS_Store?
