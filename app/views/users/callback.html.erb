@@ -1,0 +1,25 @@
+<div class="parent">
+  <div class="content">
+    <h1>Your Library</h1>
+    <p><br></p>
+    <% if @names %>
+    <ul>
+    <% @names.each_with_index do |name, index| %>
+      <li><%= name %> - <%= @analysis[index] %></li>
+    <% end %>
+  </ul>
+  <% else %>
+      <h1>Not Signed In</h1>
+    <% end %>
+  </div>
+</div>
+
+<div class="parent">
+    <div class="content">
+
+        <h1>First, connect your Spotify account</h1>
+
+        <p><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
+
+    </div>
+</div>

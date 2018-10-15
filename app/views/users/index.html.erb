@@ -1,0 +1,20 @@
+<div class="parent">
+  <div class="chart">
+    <%= line_chart @analysis, title: "Euphoric progression of your library",  height: "500px", points: false, messages: {empty: "No data"}%>
+  </div>
+  <div class="content">
+    <h1>Your Library</h1>
+    <p><br></p>
+    <% if @names %>
+    <ul>
+    <% @names.each do |name| %>
+      <li><%= name %> </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h1>First, connect your Spotify account</h1>
+
+  <p><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
+    <% end %>
+  </div>
+</div>
